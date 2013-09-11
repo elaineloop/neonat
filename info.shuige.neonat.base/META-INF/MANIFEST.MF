@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Base
+Bundle-SymbolicName: info.shuige.neonat.base
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: info.shuige.neonat.base.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: info.shuige.neonat.entity,
+ org.osgi.framework;version="1.3.0"
+Export-Package: info.shuige.neonat.entity
+Require-Bundle: info.shuige.neonat.persistence.serialize;bundle-version="1.0.0"

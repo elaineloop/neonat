@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Serialize
+Bundle-SymbolicName: info.shuige.neonat.persistence.serialize
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: info.shuige.neonat.persistence.serialize.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: info.shuige.neonat.persistence.service,info.shuige.neonat.entity,
+ org.osgi.framework;version="1.3.0"
+Require-Bundle: info.shuige.neonat.base;bundle-version="1.0.0"
+Export-Package: info.shuige.neonat.persistence.service
