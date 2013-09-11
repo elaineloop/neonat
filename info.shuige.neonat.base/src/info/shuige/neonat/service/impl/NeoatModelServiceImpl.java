@@ -3,6 +3,10 @@ package info.shuige.neonat.service.impl;
 import info.shuige.neonat.entity.Board;
 import info.shuige.neonat.service.NeoatModelService;
 
+/**模型访问接口实现
+ * @author shuige
+ * 2013年9月12日
+ */
 public class NeoatModelServiceImpl implements NeoatModelService{
 
 	private volatile static Board board;
