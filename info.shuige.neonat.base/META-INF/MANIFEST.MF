@@ -7,5 +7,6 @@ Bundle-Activator: info.shuige.neonat.base.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Import-Package: info.shuige.neonat.entity,
  org.osgi.framework;version="1.3.0"
-Export-Package: info.shuige.neonat.entity
+Export-Package: info.shuige.neonat.entity,
+ info.shuige.neonat.service
 Require-Bundle: info.shuige.neonat.persistence.serialize;bundle-version="1.0.0"
