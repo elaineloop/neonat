@@ -94,6 +94,10 @@ public class Board implements Serializable{
 	public void setTopicMap(Map<Integer, Topic> topicMap) {
 		this.topicMap = topicMap;
 	}
+	public Object getTopicCount() {
+		
+		return this.topics.size();
+	}
 	
 	
 }
