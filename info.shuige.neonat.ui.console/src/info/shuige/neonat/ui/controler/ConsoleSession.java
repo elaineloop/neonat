@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.net.SocketTimeoutException;
 
 public class ConsoleSession implements Runnable {
 
@@ -31,7 +32,62 @@ public class ConsoleSession implements Runnable {
 
 	@Override
 	public void run() {
+		String cmdLine;
+		nc.doCommand("welcome");
+		while(true){
+			try{
+				while(in.ready()){
+					Thread.sleep(300);
+				}
+				cmdLine = in.readLine();
+				if(null == cmdLine){
+					break;
+					
+				} else{
+					nc.doCommand(cmdLine);
+				}
+			}catch(SocketTimeoutException e){
+				System.out.println("客户端超过"+ConsoleManager.SOCKET_TIME+"毫秒未响应，自动断开链接");
+				try{
+					socket.close();
+				}catch(IOException el){
+					
+				}
+				return ;
+			}catch(Exception e){
+				e.printStackTrace(out);
+			}
+		}
 		
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
